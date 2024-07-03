@@ -288,7 +288,7 @@ class Customers():
 
         Returns:
             function: dem_return(a) A function that takes the 'from' node
-                index and returns the distance in km.
+                index and returns the corresponding demand at that node.
         """
 
         def dem_return(from_index):
@@ -491,7 +491,7 @@ def vehicle_output_string(manager, routing, plan):
 
 def build_vehicle_route(manager, routing, plan, customers, veh_number):
     """
-    Build a route for a vehicle by starting at the strat node and
+    Build a route for a vehicle by starting at the start node and
     continuing to the end node.
 
     Args: routing (ortools.constraint_solver.pywrapcp.RoutingModel): routing.
